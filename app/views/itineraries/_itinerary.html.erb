@@ -1,0 +1,21 @@
+<div id="<%= dom_id itinerary %>">
+  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+    <img src="https://flynote-cms-production.s3.ap-south-1.amazonaws.com/experience/94101596-4fed-40f6-a7bd-0bd601d4fb59/images/ronak-mokashi-V53R6gkeN_w-unsplash_cbc53041-082b-46c0-8bd3-384b2ec358c4.jpg?ts=1584601181617" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+  </div>
+  <div class="flex justify-between items-center">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= itinerary.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Price:</strong>
+    <%= itinerary.price %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this itinerary", itinerary, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this itinerary", edit_itinerary_path(itinerary), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
